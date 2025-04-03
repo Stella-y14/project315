@@ -1,7 +1,7 @@
-<?php
+<!-- <?php
     require_once('function.php');
     connectDB();
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@
             <h2>
                 from South Korea <br>Brigham Young Univeresity - Hawaii <br>Junior
             </h2>
-            <p><?php
+            <!-- <p><?php
                 //default is there and will show input from the user as they type in url.
                 $name = $_GET['name'] ?? 'there';
                 echo "<br/>ALOHA, ".$name."!
@@ -40,7 +40,7 @@
                 <br>I'm studying Computer Science in BYUH.
                 <br>You can explore what I've done.
                 <br>Feel free to look around."
-            ?></p>
+            ?></p> -->
             <p class="fun">
                 <br>fun interaction!
                 <br>put your name on url like this
