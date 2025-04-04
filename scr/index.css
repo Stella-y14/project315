@@ -3,13 +3,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FDF6F0;
+    background-color: #FFF8F0;
     font-family: 'Dosis', sans-serif;
+    color: #023047;
 }
 
 /* Navigation */
 nav {
-    background-color: #E7C24F;
+    background-color: #8ECAE6;
     display: flex;
     justify-content: center;
     padding: 1rem;
@@ -26,7 +27,7 @@ nav {
 
 .topnav a:hover {
     background-color: white;
-    color: #396E94;
+    color: #023047;
     padding: 0.3rem 1rem;
     border-radius: 12px;
 }
@@ -37,13 +38,13 @@ nav {
     font-size: 3rem;
     text-align: center;
     margin-top: 2rem;
-    color: #396E94;
+    color: #023047;
 }
 
 header p {
     text-align: center;
     font-size: 1.3rem;
-    color: #396E94;
+    color: #023047;
     line-height: 2rem;
     margin: 1.5rem auto;
     max-width: 800px;
@@ -57,7 +58,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #396E94;
+    background-color: #8ECAE6;
     color: white;
     padding: 2rem;
     display: flex;
@@ -82,7 +83,7 @@ input[type=submit], main a {
     font-family: 'Dosis', sans-serif;
     font-size: 1.2rem;
     border: none;
-    background-color: #E7C24F;
+    background-color: #FB8500;
     color: #fff;
     padding: 0.7rem 1.5rem;
     border-radius: 8px;
@@ -92,7 +93,8 @@ input[type=submit], main a {
 }
 
 input[type=submit]:hover, main a:hover {
-    background-color: #d4a935;
+    background-color: #FFB703;
+    color: #023047;
 }
 
 /* Forms */
@@ -116,21 +118,21 @@ th, td {
     border-bottom: 1px solid #ddd;
     padding: 1rem;
     font-size: 1.1rem;
-    color: #396E94;
+    color: #023047;
 }
 
-/* Profile Image (if used) */
+/* Profile Image */
 .profile img {
     display: block;
     margin: 2rem auto;
     width: 40%;
-    border: 8px solid #E7C24F;
+    border: 8px solid #FFB703;
     border-radius: 20px;
 }
 
-/* Utility Classes */
+/* Utility */
 .fun, h2, h4 {
     text-align: center;
     font-size: 1.5rem;
-    color: grey;
+    color: #666;
 }
