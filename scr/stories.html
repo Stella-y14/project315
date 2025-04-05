@@ -19,32 +19,32 @@
         <main>
         
             <section class="stories-section">
-                <h2>Stories from Our Community</h2>
+                <h2>Share Your Story</h2>
               
-                <!-- 카테고리 탭 -->
-                <div class="category-tabs">
-                  <button class="tab-button active" data-category="preparation">입양 준비</button>
-                  <button class="tab-button" data-category="daily">입양 가족 일상</button>
-                  <button class="tab-button" data-category="challenge">챌린지 후기</button>
-                </div>
+                <form id="story-form">
+                  <label for="name">Your Name:</label><br>
+                  <input type="text" id="name" name="name" required><br><br>
               
-                <!-- 사용자 입력 폼 -->
-                <form id="storyForm" class="story-form">
-                  <textarea id="storyText" placeholder="당신의 이야기를 공유해보세요..." required></textarea>
-                  <select id="storyCategory">
+                  <label for="category">Category:</label><br>
+                  <select id="category" name="category" required>
                     <option value="preparation">입양 준비</option>
                     <option value="daily">입양 가족 일상</option>
                     <option value="challenge">챌린지 후기</option>
-                  </select>
-                  <button type="submit">등록하기</button>
+                  </select><br><br>
+              
+                  <label for="story">Your Comment:</label><br>
+                  <textarea id="story" name="story" rows="4" required></textarea><br><br>
+              
+                  <input type="submit" value="Submit">
                 </form>
               
-                <!-- 스토리 목록 -->
-                <div class="stories-container">
-                  <div class="story-group active" id="preparation"></div>
-                  <div class="story-group" id="daily"></div>
-                  <div class="story-group" id="challenge"></div>
+                <div class="story-tabs">
+                  <button data-category="preparation">입양 준비</button>
+                  <button data-category="daily">입양 가족 일상</button>
+                  <button data-category="challenge">챌린지 후기</button>
                 </div>
+              
+                <div id="story-list"></div>
               </section>
               
 
@@ -57,46 +57,50 @@
     </div>
 
     <script>
-        const form = document.getElementById('storyForm');
-        const textarea = document.getElementById('storyText');
-        const select = document.getElementById('storyCategory');
-        const buttons = document.querySelectorAll('.tab-button');
-        const groups = document.querySelectorAll('.story-group');
+        const form = document.getElementById('story-form');
+        const storyList = document.getElementById('story-list');
+        const buttons = document.querySelectorAll('.story-tabs button');
+        const stories = {
+          preparation: [],
+          daily: [],
+          challenge: []
+        };
       
-        // 탭 전환
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          const name = form.name.value.trim();
+          const category = form.category.value;
+          const story = form.story.value.trim();
+      
+          if (name && category && story) {
+            stories[category].push({ name, text: story });
+            form.reset();
+            displayStories(category);
+          }
+        });
+      
         buttons.forEach(button => {
           button.addEventListener('click', () => {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-      
             const category = button.getAttribute('data-category');
-            groups.forEach(group => {
-              group.classList.remove('active');
-              if (group.id === category) {
-                group.classList.add('active');
-              }
-            });
+            displayStories(category);
           });
         });
       
-        // 폼 제출 시 새 스토리 추가
-        form.addEventListener('submit', e => {
-          e.preventDefault();
-          const storyText = textarea.value.trim();
-          const category = select.value;
-      
-          if (storyText !== '') {
-            const newStory = document.createElement('div');
-            newStory.classList.add('story-card');
-            newStory.textContent = `"${storyText}"`;
-      
-            const targetGroup = document.getElementById(category);
-            targetGroup.appendChild(newStory);
-      
-            textarea.value = '';
-          }
-        });
+        function displayStories(category) {
+          storyList.innerHTML = '';
+          stories[category].forEach(entry => {
+            const div = document.createElement('div');
+            div.classList.add('story-entry');
+            div.innerHTML = `
+              <p>"${entry.text}"</p>
+              <p><strong>- ${entry.name}</strong></p>
+              <hr>
+            `;
+            storyList.appendChild(div);
+          });
+        }
       </script>
+      
       
 </body>
 </html>
