@@ -187,3 +187,43 @@ table {
     line-height: 1.8rem;
     margin-bottom: 1.2rem;
 }
+
+.story-form {
+    margin: 2rem auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .story-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  .story-form select {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .story-form button {
+    background-color: #E76F51;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .story-form button:hover {
+    background-color: #D55F41;
+  }
+  
