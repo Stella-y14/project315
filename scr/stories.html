@@ -22,26 +22,26 @@
                 <h2>Share Your Story</h2>
               
                 <form id="story-form">
-                  <label for="name">Your Name:</label><br>
+                  <label for="name">Name</label><br>
                   <input type="text" id="name" name="name" required><br><br>
               
                   <label for="category">Category:</label><br>
                   <select id="category" name="category" required>
-                    <option value="preparation">입양 준비</option>
-                    <option value="daily">입양 가족 일상</option>
-                    <option value="challenge">챌린지 후기</option>
+                    <option value="preparation">Preparation</option>
+                    <option value="daily">Daily</option>
+                    <option value="challenge">Challenge</option>
                   </select><br><br>
               
-                  <label for="story">Your Comment:</label><br>
+                  <label for="story">Your Story</label><br>
                   <textarea id="story" name="story" rows="4" required></textarea><br><br>
               
                   <input type="submit" value="Submit">
                 </form>
               
                 <div class="story-tabs">
-                  <button data-category="preparation">입양 준비</button>
-                  <button data-category="daily">입양 가족 일상</button>
-                  <button data-category="challenge">챌린지 후기</button>
+                  <button data-category="preparation">Preparation</button>
+                  <button data-category="daily">Daily</button>
+                  <button data-category="challenge">Challenge</button>
                 </div>
               
                 <div id="story-list"></div>
