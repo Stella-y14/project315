@@ -105,3 +105,26 @@ table {
     font-size: 1.5rem;
     color: #795548;
 }
+
+.adoption-consider-section {
+    background-color: #FFE5D9; /* 따뜻한 살구빛 배경 */
+    padding: 3rem 2rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.adoption-consider-section h2 {
+    font-size: 2.5rem;
+    color: #9C6644;
+    margin-bottom: 1.5rem;
+}
+
+.adoption-consider-section p {
+    font-size: 1.2rem;
+    color: #5E3023;
+    line-height: 1.8rem;
+    margin-bottom: 1.2rem;
+}
