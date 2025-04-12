@@ -59,18 +59,40 @@
             </section>
 
             <section class="video-section">
-                <h3>Watch and Learn: Adoption Stories & Expert Advice</h3>
-                <div class="video-container">
-                    <div class="video-wrapper">
-                        <iframe src="https://embed.ted.com/talks/christopher_ategeka_how_adoption_worked_for_me" frameborder="0" allowfullscreen></iframe>
-                        <a href="https://www.ted.com/talks/christopher_ategeka_how_adoption_worked_for_me?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare">How adoption worked for me</a>
+                <h3>Adoption Stories</h3>
+                <div class="video-slider">
+                  <button class="slide-btn left" onclick="moveVideoSlide(-1)">&#10094;</button>
+                  <div class="video-track">
+                    <div class="video-slide">
+                      <iframe src="https://embed.ted.com/talks/christopher_ategeka_how_adoption_worked_for_me" frameborder="0" allowfullscreen></iframe>
+                      <p>
+                        <a href="https://www.ted.com/talks/christopher_ategeka_how_adoption_worked_for_me?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare" target="_blank">
+                          How adoption worked for me
+                        </a>
+                      </p>
                     </div>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-                        <p>Psychologist on Preparing for Adoption</p>
+                    <div class="video-slide">
+                      <iframe src="https://www.youtube.com/embed/6xaKPG2LvXE?si=n67vXwRPdaZY8E0w" frameborder="0" allowfullscreen></iframe>
+                      <p>
+                        <a href="https://youtu.be/6xaKPG2LvXE?si=cg-AjPzLbfo9-dUd" target="_blank">
+                          Nobody Prepares You for That Moment
+                        </a>
+                      </p>
                     </div>
+                    <div class="video-slide">
+                        <iframe src="https://www.youtube.com/embed/EkRqHfFL00Q?si=Vwpt2xpkCatXpabq" frameborder="0" allowfullscreen></iframe>
+                        <p>
+                          <a href="https://youtu.be/EkRqHfFL00Q?si=Vwpt2xpkCatXpabq" target="_blank">
+                            8 Years Later - Where is She Now? Ghana Adoption Story
+                          </a>
+                        </p>
+                      </div>
+                    <!-- Add more slides here if needed -->
+                  </div>
+                  <button class="slide-btn right" onclick="moveVideoSlide(1)">&#10095;</button>
                 </div>
-            </section>            
+              </section>
+                        
         </main>
         
         <footer>
@@ -80,3 +102,22 @@
     </div>
 </body>
 </html>
+
+<script>
+    let videoSlideIndex = 0;
+  
+    function moveVideoSlide(direction) {
+      const track = document.querySelector('.video-track');
+      const slides = document.querySelectorAll('.video-slide');
+      const totalSlides = slides.length;
+  
+      videoSlideIndex += direction;
+  
+      if (videoSlideIndex < 0) videoSlideIndex = totalSlides - 1;
+      if (videoSlideIndex >= totalSlides) videoSlideIndex = 0;
+  
+      const offset = -videoSlideIndex * 100;
+      track.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+  
