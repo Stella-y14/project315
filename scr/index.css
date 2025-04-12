@@ -288,3 +288,68 @@ table {
     background-color: #F4A261;  /* 약간 더 진한 오렌지 색 */
     color: white;
 }
+
+
+/* Preparation for Adoption Page */
+.prep-section {
+    background-color: #FFF0E6;
+    padding: 3rem 2rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.prep-section h2 {
+    font-size: 2.4rem;
+    color: #9C6644;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.prep-section p {
+    font-size: 1.2rem;
+    color: #5E3023;
+    margin-bottom: 1.2rem;
+    line-height: 1.8rem;
+}
+
+/* Quotation Styling */
+.prep-quote {
+    font-style: italic;
+    background-color: #FCD5CE;
+    padding: 1rem 1.5rem;
+    border-left: 5px solid #9C6644;
+    color: #5E3023;
+    margin: 2rem 0;
+    border-radius: 12px;
+}
+
+/* Questions Section */
+.prep-questions {
+    background-color: #FFE5D9;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.prep-questions h3 {
+    font-size: 2rem;
+    color: #9C6644;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.prep-questions ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.prep-questions li {
+    font-size: 1.2rem;
+    color: #5E3023;
+    margin-bottom: 0.8rem;
+    line-height: 1.6rem;
+}
