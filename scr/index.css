@@ -437,3 +437,60 @@ table {
 .slide-btn:hover {
     background-color: #D65A3B;
 }
+
+.happy-family-section {
+    background-color: #FFF8F0;
+    padding: 3rem 2rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.happy-family-section h2 {
+    font-size: 2.4rem;
+    color: #9C6644;
+    margin-bottom: 1rem;
+}
+
+.happy-family-section p {
+    font-size: 1.2rem;
+    color: #5E3023;
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+}
+
+/* Challenge Grid */
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.challenge-grid div {
+    background-color: #FCD5CE;
+    color: #5D4037;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+.challenge-grid div:hover {
+    background-color: #F4A261;
+    color: white;
+    cursor: pointer;
+}
+
+.challenge-citation {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.challenge-citation a:hover {
+    text-decoration: underline;
+}
